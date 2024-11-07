@@ -1,0 +1,90 @@
+h1 {
+    font-weight: bold;
+    color: darkblue;
+    margin-left: 10px;
+}
+
+h2 {
+    font-weight: bold;
+    color: rgb(3, 3, 233);
+    margin-left: 10px;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+
+
+.book {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 20px;
+    border-style: solid;
+    width: 25%;
+    display: inline-block;
+}
+
+.books-container img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.available p {
+    color: rgb(179, 0, 0);
+}
+
+.available button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.available a {
+    text-decoration: none;
+}
+
+.available button:hover {
+    border: solid 1px;
+}
+
+@media screen and (max-width: 600px) {
+
+    h1,
+    h2,
+    p {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .book {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .books-container img {
+        width: 80%;
+    }
+
+    .available button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
