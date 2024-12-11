@@ -26,9 +26,10 @@ export class LibraryComponent {
 
   LibraryService: LibraryService = inject(LibraryService);
   books: Book[] = [];
+  
 
   constructor() {
-    this.LibraryService.getAllAvailableBooks().subscribe(books => this.books = books);
+    this.LibraryService.getListOfBooks().subscribe(books => this.books = books);
   }
 
   newBook = {
