@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Book } from './models/book';
-import { of, delay, Observable } from 'rxjs';
+import { of, delay, Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -50,6 +50,12 @@ export class LibraryService {
   ];
 
     getListOfBooks(): Observable < Book[] > {
-      return of(this.listOfBooks).pipe(delay(2000));
+      return of(this.listOfBooks).pipe(
+        delay(2000),
+        
+        map(books => books.map(book =>({
+          ...book,
+          title: book.title.toUpperCase()}
+    ))));
     }
 }
